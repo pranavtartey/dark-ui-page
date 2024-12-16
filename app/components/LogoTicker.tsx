@@ -22,7 +22,7 @@ export const LogoTicker = () => {
       <div className="container">
         <div className="mb-8">
           <h2 className="text-center text-xl tracking-wide max-sm:max-w-[300px] mx-auto text-white/70">
-            Trusted by the world's most innovative teams
+            Trusted by the world&apos;s most innovative teams
           </h2>
         </div>
         <div className="[mask-image:linear-gradient(to_right,transparent,black,transparent)] overflow-x-hidden">
