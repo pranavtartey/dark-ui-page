@@ -1,6 +1,8 @@
+"use client";
 import ArrowIcon from "@/app/assets/icons/arrow-w.svg";
 import CursorImage from "@/app/assets/images/cursor.png";
 import MessageImage from "@/app/assets/images/message.png";
+import { motion } from "framer-motion";
 import Image from "next/image";
 export const Hero = () => {
   return (
@@ -27,20 +29,32 @@ export const Hero = () => {
               One Task <br />
               at a time
             </h1>
-            <Image
-              src={CursorImage}
-              alt="cursor-image"
-              height={200}
-              width={200}
-              className="max-sm:hidden absolute right-[486px] top-[108px]"
-            />
-            <Image
-              src={MessageImage}
-              alt="message-image"
-              height={200}
-              width={200}
-              className="max-sm:hidden absolute top-[56px] right-[-175px]"
-            />
+            <motion.div className="max-sm:hidden absolute right-[486px] top-[108px]"
+            drag
+            dragSnapToOrigin>
+              <Image
+                src={CursorImage}
+                alt="cursor-image"
+                height={200}
+                width={200}
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
+            <motion.div className="max-sm:hidden absolute top-[56px] right-[-175px]"
+            drag
+            dragSnapToOrigin
+            >
+
+              <Image
+                src={MessageImage}
+                alt="message-image"
+                height={200}
+                width={200}
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <p className="text-white mx-auto text-center text-xl mt-8 max-w-md">
@@ -48,7 +62,9 @@ export const Hero = () => {
           progress, motivate your efforts, and celebrate your success.
         </p>
         <div className="flex justify-center items -center mt-8 font-medium">
-          <button className="btn hover:tracking-wide hover:bg-white/60 transit">Get for free</button>
+          <button className="btn hover:tracking-wide hover:bg-white/60 transit">
+            Get for free
+          </button>
         </div>
       </div>
     </section>

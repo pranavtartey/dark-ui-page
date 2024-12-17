@@ -1,4 +1,5 @@
 import EcoSystumIcon from "@/app/assets/icons/ecosystem.svg";
+import Feature from "./Feature";
 const features = [
   {
     title: "Integration Ecosystem",
@@ -31,21 +32,8 @@ export const Features = () => {
           quickly.
         </p>
         <div className="mt-10 flex max-lg:flex-col justify-center items-center flex-1 gap-4">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="bg-[#0D0D0D] px-5 flex flex-col gap-4 mb-3 rounded-xl justify-center items-center h-72 border border-white/20"
-            >
-              <div className="bg-white text-black h-14 w-14 rounded-lg flex justify-center items-center">
-                <EcoSystumIcon />
-              </div>
-              <h3 className="text-center text-xl tracking-normal font-medium">
-                {feature.title}
-              </h3>
-              <p className="text-lg text-center leading-normal max-w-sm">
-                {feature.description}
-              </p>
-            </div>
+          {features.map(({ description, title }) => (
+            <Feature key={title} title={title} description={description} />
           ))}
         </div>
       </div>
