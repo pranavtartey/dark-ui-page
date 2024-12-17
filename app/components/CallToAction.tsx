@@ -12,7 +12,7 @@ export const CallToAction = () => {
     offset: ["start end", "end start"],
   });
 
-  const translateY = useTransform(scrollYProgress,[0,1],[150,-150])
+  const translateY = useTransform(scrollYProgress,[0,1],[-80,80])
 
   return (
     <section className="bg-black text-white sm:py-24 py-[72px] overflow-hidden">

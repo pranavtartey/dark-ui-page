@@ -32,6 +32,7 @@ export const ProductShowcase = () => {
             rotateX,
             transformPerspective: "800px",
           }}
+          className="max-sm:mx-10 sm:mx-20"
           ref={imageRef}
         >
           <Image src={appScreen} alt="app-screen" className="mt-14 mx-auto" />
